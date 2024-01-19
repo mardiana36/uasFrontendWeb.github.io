@@ -1,0 +1,566 @@
+:root {
+  --biruTua: #001e3c;
+  --abuMuda: #f7f7f7;
+  --orange: #ea7d00;
+  --biruGelap: #1c1b29;
+  --abu: #707070;
+}
+
+/*---------------AGENDA------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+.sectionAgenda {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.container-agenda {
+  max-width: 1000px;
+  max-height: 540px;
+  display: grid;
+  margin: 20px auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.headerAgenda {
+  grid-area: 1 / 1 / 2 / 2;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: var(--biruTua);
+  color: white;
+}
+
+.headerAgenda h1 {
+  font-size: 24px;
+}
+
+.posterAgenda {
+  grid-area: 1 / 2 / 3 /3;
+  border-radius: 10px;
+  position: relative;
+}
+
+.posterAgenda img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.detailAgenda {
+  display: flex;
+  gap: 30px;
+  border-radius: 20px;
+  padding: 30px;
+  background-color: var(--biruTua);
+  color: white;
+}
+
+.detailLogo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.detailLogoSmall {
+  width: 15px;
+  height: 15px;
+}
+
+.jadwal,
+.lokasi {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.posterOverlay {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.posterAgenda:hover .posterOverlay {
+  opacity: 1;
+}
+
+.nextButton {
+  background-color: var(--biruTua);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 15px;
+}
+
+/*-------------REKOMENDASI SECTION-----------------  */
+
+.sectionRekomendasi {
+  margin: 50px auto;
+}
+
+.sectionRekomendasiHeader {
+  padding-top: 15px;
+  margin-left: 20px;
+  margin-bottom: -30px;
+  border-top: 1px solid rgb(144, 143, 143);
+}
+
+.containerRekomendasi {
+  display: grid;
+  place-items: center;
+  margin-inline: 24px;
+  padding-block: 80px;
+}
+
+.cardContainer {
+  display: grid;
+  row-gap: 56px;
+}
+
+.cardRekomendasi {
+  position: relative;
+  overflow: hidden;
+}
+
+.cardRekomendasi img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.cardImg {
+  width: 328px;
+  border-radius: 24px;
+}
+
+.cardData {
+  background-color: white;
+  width: 280px;
+  padding: 24px 32px;
+  box-shadow: 0px 8px 24px hsla(0, 0%, 0%, 0.15);
+  border-radius: 16px;
+  position: absolute;
+  bottom: -144px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.deskripsiCard {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.judulCard {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.buttonCard {
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.buttonCard:hover {
+  text-decoration: underline;
+}
+
+.cardRekomendasi:hover .cardData {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.cardRekomendasi:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.cardRekomendasi:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.cardRekomendasi:not(:hover) .cardData {
+  animation: remove-data 1s forwards;
+}
+
+@keyframes show-data {
+  50% {
+    transform: translateY(-160px);
+  }
+  100% {
+    transform: translateY(-112px);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-112px);
+  }
+  50% {
+    transform: translateY(-160px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+/*-------------------KONTAK----------------*/
+
+.mapKontak {
+  width: 100%;
+}
+
+.kontak,
+.kritikSaran {
+  width: 35%;
+}
+
+.kritikSaran form {
+  margin-top: 10px;
+}
+.informasiKontak {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  gap: 1em;
+}
+
+.inputBox input {
+  border-radius: 10px;
+  padding: 5px;
+  width: 95%;
+  margin: 5px 0;
+  outline: none;
+  color: #ddd;
+  border: 1px solid #707070;
+}
+
+.inputBoxdouble input {
+  width: 47%;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px 0;
+  outline: none;
+  color: #ddd;
+  border: 1px solid #707070;
+}
+
+.inputBox.pesan input {
+  padding-bottom: 50px;
+}
+
+.submitButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.submitButton button {
+  color: white;
+  border: none;
+  background-color: var(--orange);
+  width: 100px;
+  border-radius: 10px;
+  padding: 8px 5px;
+}
+
+.iconMediaSosial {
+  padding: 10px 0;
+}
+.iconMediaSosial img {
+  width: 50px;
+  height: 50px;
+}
+
+/*----------------PENGUMUMAN--------------*/
+
+.sectionPengumuman {
+  margin-bottom: 200px;
+  margin: 40px auto;
+}
+
+.containerPengumuman {
+  margin: 40px auto;
+  max-width: 1200px;
+  max-height: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 20px;
+  grid-gap: 40px;
+}
+
+.containerCardPengumuman {
+  background-color: var(--biruTua);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+  transition: all 0.3s;
+}
+
+.containerCardPengumuman:hover {
+  transform: scale(1.05);
+}
+
+.cardPoster {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.cardPoster:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.cardPoster img {
+  width: 100%;
+  display: block;
+  border-radius: 20px 20px 0 0;
+}
+
+.cardPoster:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px 20px 0 0;
+  opacity: 0.7;
+}
+
+.cardDetail {
+  padding: 20px 10px;
+}
+.cardDetail > h3 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0 15px 0;
+}
+.cardDetail > p {
+  color: #a0a0a0;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.cardDetail > h4 {
+  color: #ffffff;
+  margin: 10px 0 15px 0;
+}
+
+.cardDetail > button {
+  padding: 5px 10px 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--orange);
+  color: #ffffff;
+}
+
+.buttonUnduh:hover {
+  background-color: #ffffff;
+  border: 1px solid var(--orange);
+  color: var(--orange);
+}
+
+.headerPengumuman {
+  margin-left: 15px;
+  margin-bottom: -30px;
+}
+
+/*------------------PRESTASI--------------------*/
+
+.sectionPrestasi {
+  margin: 40px auto;
+}
+
+.headerPrestasi {
+  margin-bottom: -50px;
+  margin-left: 20px;
+}
+.containerPrestasi {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  gap: 30px;
+}
+
+.containerPrestasi div {
+  background-color: #001e3c;
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+}
+
+.containerPrestasi img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.satuKolom {
+  grid-row: span 1;
+  border: 16px solid #001e3c;
+  color: white;
+  padding: 8px;
+  transition: all 0.3s;
+}
+
+.satuKolom:hover {
+  transform: scale(1.05);
+}
+.duaKolom:hover {
+  border: 16px solid #d8d8d8;
+  transform: scale(1.05);
+}
+.duaKolom {
+  transition: all 0.3s;
+  grid-row: span 2;
+  border: 16px solid #f7f7f7;
+}
+
+.iconPrestasi img {
+  display: flex;
+  margin: 5px auto;
+  width: 70px;
+  height: 70px;
+}
+
+.iconKecil img {
+  width: 12px;
+  height: 12px;
+}
+
+/*---------------------RESPONSIVE---------------------*/
+
+@media screen and (max-width: 340px) {
+  .containerRekomendasi {
+    margin-inline: 16px;
+  }
+
+  .cardData {
+    width: 250px;
+    padding: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .cardContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cardImg {
+    width: 348px;
+  }
+
+  .cardData {
+    width: 316px;
+    padding-inline: 40px;
+  }
+}
+
+@media screen and (max-width: 978px) {
+  .container-agenda {
+    max-width: 500px;
+    max-height: 250px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .headerAgenda,
+  .posterAgenda,
+  .detailAgenda {
+    grid-area: auto;
+  }
+
+  .sectionAgenda {
+    margin-bottom: 1150px;
+  }
+
+  .containerPrestasi {
+    max-width: 600px;
+    grid-template-columns: 1fr;
+  }
+
+  .containerPengumuman {
+    max-width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-agenda {
+    max-width: 350px;
+    max-height: 150px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .headerAgenda,
+  .posterAgenda,
+  .detailAgenda {
+    grid-area: auto;
+  }
+
+  .sectionAgenda {
+    margin-bottom: 1000px;
+  }
+
+  #agendaHeader {
+    font-size: 16px;
+  }
+
+  .detailAgenda,
+  h2,
+  p {
+    font-size: 14px;
+  }
+  #agendaDescription {
+    font-size: 12px;
+  }
+
+  .containerPrestasi {
+    max-width: 350px;
+    grid-template-columns: 1fr;
+  }
+
+  .containerPengumuman {
+    max-width: 350px;
+    grid-template-columns: 1fr;
+    margin-bottom: 750px;
+  }
+}

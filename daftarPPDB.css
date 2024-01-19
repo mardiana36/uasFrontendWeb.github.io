@@ -1,0 +1,299 @@
+.header-ppdb{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    color: var(--warnaPutih);
+    padding: 50px 20px 0px;
+    overflow: hidden;
+}
+.header-ppdb::before{
+    content:  "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    background-position: center;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background: url("aset/gambar/backgroundBiru.jpg")no-repeat;
+}
+.rowHeader-ppdb {
+    filter: drop-shadow(0px 0px 20px #000000ba);
+}
+.rowHeader-ppdb h1{
+    font-weight: bolder;
+}
+.rowHeader-ppdb p{
+    margin-top: 10px;
+    font-size: 24px;
+}
+.col-imgppdb{
+    position: relative;
+}
+.col-imgppdb img{
+    max-width: 50%;
+}
+
+.col-imgppdb > p{
+    font-weight: bolder;
+    position: absolute;
+    padding: 30px;
+    background-color: transparent;
+    border-radius: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+}
+.col-imgppdb > p:nth-child(1){
+    left: 10%;
+    top: 0;
+    box-shadow: -5px 5px 0px var(--warnaMerah);
+}
+.col-imgppdb > p:nth-child(2){
+    left: 5%;
+    top: 120px;
+    box-shadow: -5px 5px 0px var(--warnaMerah);
+}
+.col-imgppdb > p:nth-child(3){
+    right: 10%;
+    top: 0px;
+    box-shadow: 5px 5px 0px var(--warnaKuning);
+}
+.col-imgppdb > p:nth-child(4){
+    right: 5%;
+    top: 120px;
+    box-shadow: 5px 5px 0px var(--warnaKuning);
+}
+.section-ppdb1{
+    justify-content: center;
+    margin-top: 50px;
+}
+.container-ppdb1{
+
+}
+.row-ppdb1{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+}
+.judul-ppdb1{
+    background-color: var(--warnaBiru);
+    color: var(--warnaPutih);
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0;
+    cursor: pointer;
+}
+.icondrop-ppdb1{
+    margin-top: 10px;
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+.col-ppdb1{
+    width: 50%;
+}
+.div-ppdb1{
+    overflow: hidden;
+    height: 0px;
+    transition: 1s;
+}
+.ul-ppdb1 {
+    padding-top: 40px;
+    transform: translateY(-100%);
+    transition: 1s;
+    background-color: var(--warnaPutih);
+    border: 1px solid var(--warnaBiru);
+    border-radius: 20px;
+}
+.ul-ppdb1 li{
+   list-style-type: decimal !important;
+}
+.section-ppdb2{
+    transition: 1s all;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    background-color: var(--warnaBiru);
+    color: var(--warnaPutih);
+    padding: 40px 20px;
+}
+.container-ppdb2{
+    border: 5px solid var(--warnaPutih);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow:  -20px 0px 0px var(--warnaMerah),
+    20px 0px 0px var(--warnaKuning);
+}
+.container-ppdb2 a{
+    color: var(--warnaBiru);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    background-color: var(--warnaPutih);
+    border-radius: 20px;
+    font-weight: bolder;
+    margin: 40px auto 0px;
+    transition: 0.8s;
+}
+.container-ppdb2 a i{
+    font-size: 40px;
+}
+.container-ppdb2 a:hover{
+    animation: glowing 2s infinite ease-in-out;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px #0158968d;
+}
+.section-ppdb3{
+    justify-content: center;
+    margin: 50px 0px;
+}
+
+.row1-ppdb3{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    position: relative;
+}
+.row1-ppdb3::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: var(--warnaBiru);
+    background-position: center;
+    z-index: -1;
+}
+.col1-ppdb3{
+    text-align: center;
+}
+.col1-ppdb3 p{
+    display: inline-block;
+    border: 3px solid var(--warnaMerah);
+    padding: 20px;
+    width: 120px;
+    border-radius: 100%;
+    font-weight: bold;
+    color: var(--warnaMerah);
+    background-color: var(--warnaPutih);
+    transition: 0.8s;
+}
+.row2-ppdb3{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.col2-ppdb3{
+    width: 100%;
+}
+.form-ppdb3{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.form-ppdb3 > div{
+    width: 48%;
+}
+.form-ppdb3 label{
+    display: block;
+    margin-top: 30px;
+}
+.form-ppdb3 input, .form-ppdb3 select, .form-ppdb3 textarea{
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    border-radius: 10px;
+    border: 1px solid #00579536;
+    transition: 0.8s;
+}
+.form-ppdb3 select option{
+    padding: 20px !important;
+    
+}
+.form-spesial > div{
+    width: 20%;
+}
+.form-spesial input{
+    border: none !important;
+    width: unset !important;
+    padding: unset !important;
+    border-radius: unset !important;
+}
+.form-spesial small{
+    display: block;
+    margin-top: -10px;
+}
+.form-spesial input:focus{
+    outline: none !important;
+}
+.form-ppdb3 input:focus, .form-ppdb3 select:focus, .form-ppdb3 textarea:focus{
+    outline: 2px solid var(--warnaBiru);
+    transform: scale(1.05);
+}
+.previewFile{
+    display: inline-block;
+    width: 200px;
+    margin: 20px 0px;
+    height: 200px;
+}
+.btnNext-ppdb3{
+    margin-top: 30px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: unset;
+    font-weight: bolder;
+    color: var(--warnaKuning);
+    border: 2px solid var(--warnaKuning);
+    transition: 0.8s;
+    cursor: pointer;
+}
+.btnNext-ppdb3:hover{
+    transform: scale(1.09);
+    background-color: var(--warnaKuning);
+    color: var(--warnaPutih);
+    border: none;
+}
+@media screen and (max-width: 768px) {
+    .col-imgppdb > p{
+        font-size: 13px;
+    }
+    .row-ppdb1{
+        flex-wrap: wrap;
+    }
+    .col-ppdb1{
+        width: 100%;
+        
+    }
+    .row1-ppdb3{
+        gap: 10px;
+        font-size: 13px;
+        padding: 0px 20px;
+    }
+    .col1-ppdb3 > p{
+        padding: 10px;
+        max-width: 100px;
+    }
+    .form-ppdb3{
+        flex-wrap: wrap;
+    }
+    .form-ppdb3 > div{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .row1-ppdb3{
+        gap: 0px;
+    }
+    .col1-ppdb3 > p{
+        padding: 10px;
+        max-width: 85px;
+    }
+}

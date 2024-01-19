@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="informasi.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="mardiana.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+  <script src="navbar.js"></script>
+
+    <div class="sectionAgenda">
+      <div class="sectionAgendaHeader">
+        <h1>Agenda</h1>
+        <p>Agenda terbaru di SMK TI Bali Global Denpasar</p>
+      </div>
+      <div class="container-agenda">
+        <div class="headerAgenda">
+          <h1 id="agendaHeader">Profil Pancasila</h1>
+          <br />
+          <p id="agendaDescription">
+            Pelajar Pancasila adalah perwujudan pelajar Indonesia sebagai
+            pelajar sepanjang hayat yang memiliki kompetensi global dan
+            berperilaku sesuai dengan nilai-nilai Pancasila, dengan enam ciri
+            utama: beriman, bertakwa kepada Tuhan YME, dan berakhlak mulia,
+            berkebinekaan global, bergotong royong, mandiri, bernalar kritis,
+            dan kreatif.
+          </p>
+        </div>
+
+        <div class="posterAgenda">
+          <img src="aset/gambar/agendaPoster2.jpeg" alt="" id="agendaImage" />
+          <div class="posterOverlay">
+            <button class="nextButton" onclick="nextAgenda()">Next</button>
+          </div>
+        </div>
+
+        <div class="detailAgenda">
+          <div class="jadwal">
+            <img src="aset/gambar/icon-jadwal.png" alt="" class="detailLogo" />
+            <h2>Jadwal</h2>
+            <p>
+              <span
+                ><img
+                  src="aset/gambar/icon-pelaksanaan.png"
+                  alt=""
+                  class="detailLogoSmall"
+              /></span>
+              Pelaksanaan :
+              <span id="agendaPelaksanaan">Kamis,4 January 2023</span>
+            </p>
+            <p>
+              <span
+                ><img
+                  src="aset/gambar/icon-jam.png"
+                  alt=""
+                  class="detailLogoSmall"
+              /></span>
+              <span id="agendaJam">Jam: 10.00-Selesai</span>
+            </p>
+          </div>
+          <div class="lokasi">
+            <img src="aset/gambar/icon-lokasi.png" alt="" class="detailLogo" />
+            <h2>Lokasi</h2>
+            <p>
+              <span
+                ><img
+                  src="aset/gambar/icon-locationSmall.png"
+                  alt=""
+                  class="detailLogoSmall"
+              /></span>
+              <span id="agendaLokasi">Online</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sectionRekomendasi">
+      <div class="sectionRekomendasiHeader">
+        <h1>Rekomendasi Informasi</h1>
+        <p>Kunjungi juga laman informasi berikut</p>
+      </div>
+
+      <div class="containerRekomendasi">
+        <div class="cardContainer">
+          <article class="cardRekomendasi">
+            <img src="aset/gambar/guru pengerak-s.jpg" alt="" class="cardImg" />
+            <div class="cardData">
+              <h2 class="judulCard">Agenda</h2>
+              <a href="agenda.html" class="buttonCard">Baca selengkapnya</a>
+            </div>
+          </article>
+
+          <article class="cardRekomendasi">
+            <img src="aset/gambar/pengumuman-img.jpg" alt="" class="cardImg" />
+            <div class="cardData">
+              <h2 class="judulCard">Pengumuman</h2>
+              <a href="pengumuman.html" class="buttonCard">Baca selengkapnya</a>
+            </div>
+          </article>
+
+          <article class="cardRekomendasi">
+            <img src="aset/gambar/lomba-video.JPG" alt="" class="cardImg" />
+            <div class="cardData">
+              <h2 class="judulCard">Prestasi</h2>
+              <a href="prestasi.html" class="buttonCard">Baca selengkapnya</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footerAtas">
+        <div class="kolomKiri">
+          <img src="aset/gambar/icon.png" alt="Logo TI" class="logoTi" />
+          <p>
+            Nikmati Cara Mudah dan Menyenangkan <br />
+            Ketika Membaca Buku, Update Informasi <br />
+            Sekolah Hanya Dalam Satu Genggaman
+          </p>
+        </div>
+        <div class="kolomKanan">
+          <h2>Temukan kami</h2>
+          <div class="socialMedia">
+            <a href="#"><i class="ri-telegram-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-twitter-x-fill"></i></a>
+            <a href="#"><i class="ri-youtube-fill"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footerBawah">
+        <p>&copy;CopyRight <b>SMK TI Bali Global Denpasar</b></p>
+      </div>
+    </footer>
+
+    <script src="informasi.js"></script>
+  </body>
+</html>

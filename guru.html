@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guru</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <script src="mardiana.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="navbar.js"></script>
+    <!-- content -->
+
+    <!--isi-->
+    <div class="search-container">
+        <label for="searchInput">Cari Nama:</label>
+        <input type="text" id="searchInput" placeholder="Masukkan nama...">
+        <button id="searchButton">Cari</button>
+    </div>
+    
+
+    <div id="searchResults" class="teacher-info">
+        <div class="teacher-card">
+            <img src="/aset/gambar/1.png" alt="Foto Keapala Sekolah">
+            <div class="teacher-details">
+                <p class="nik">NIK/NG : 0021.001</p>
+                <p class="name">Nama Lengkap : Drs. I Gusti Made Murjana,M.Pd</p>
+                <p class="phone">No Tlp : 082146503XXX</p>
+                <p class="email">Email : smktigmmurjana@gmail.com</p>
+                <p class="position">Jabatan : Kepala SMK TI Bali Global Denpasar</p>
+            </div>
+        </div>
+
+        <div class="teacher-card">
+            <img src="/aset/gambar/2.png" alt="Foto Guru 1">
+            <div class="teacher-details">
+                <p class="nik">NIK/NG : 0021.101</p>
+                <p class="name">Nama Lengkap : IBN. Badra Jayapati,SE</p>
+                <p class="phone">No Tlp : 085935111XXX</p>
+                <p class="email">Email : ibnbadra@gmail.com</p>
+                <p class="position">Jabatan : Kepala Tata Usaha</p>
+            </div>
+        </div>
+        
+        <div class="teacher-card">
+            <img src="/aset/gambar/3.png" alt="Foto Guru 2">
+            <div class="teacher-details">
+                <p class="nik">NIK/NG : 0021.002</p>
+                <p class="name">Nama Lengkap : I Nyoman Sucana,M.Kom</p>
+                <p class="phone">No Tlp : 081236509XXX</p>
+                <p class="email">Email : suc4n4@gmail.com</p>
+                <p class="position">Jabatan : Wakasek Kurikulum</p>
+            </div>
+        </div>
+        
+        <div class="teacher-card">
+            <img src="/aset/gambar/4.png" alt="Foto Guru 3">
+            <div class="teacher-details">
+                <p class="nik">NIK/NG : 0021.003</p>
+                <p class="name">Nama Lengkap : Bagus Putu Eka Wijaya,S.Kom</p>
+                <p class="phone">No Tlp : 082146503XXX</p>
+                <p class="email">Email : ghosteka26@gmail.com</p>
+                <p class="position">Jabatan : Wakasek Kesiswaan</p>
+            </div>
+        </div>
+
+        <div class="teacher-card">
+            <img src="/aset/gambar/5.png" alt="Foto Guru 4">
+            <div class="teacher-details">
+                <p class="nik">NIK/NG : 0021.008</p>
+                <p class="name">Nama Lengkap : I Komang Arta Wijaya,S.Kom.,M.Kom</p>
+                <p class="phone">No Tlp : 082247033XXX</p>
+                <p class="email">Email : arta.komang@gmail.com</p>
+                <p class="position">Jabatan : Komka Multimedia</p>
+            </div>
+        </div>
+
+        <div class="teacher-card">
+            <img src="/aset/gambar/6.png" alt="Foto Guru 5">
+            <div class="teacher-details">
+                <p class="nik">NIK/NG : 0021.005</p>
+                <p class="name">Nama Lengkap : Ni Wayan Sri Arini,ST.,M.Kom</p>
+                <p class="phone">No Tlp : 081338512XXX</p>
+                <p class="email">Email : baliaditya13@gmail.com</p>
+                <p class="position">Jabatan : Wakasek Humas</p>
+            </div>
+        </div>
+        
+        <div class="teacher-card">
+            <img src="/aset/gambar/7.png" alt="Foto Guru 6">
+            <div class="teacher-details">
+                <p class="nik">NIK/NG : 0021.006</p>
+                <p class="name">Nama Lengkap : I Gede Agung Abdi Prasetya,SE</p>
+                <p class="phone">No Tlp : 082247033XXX</p>
+                <p class="email">Email : agungabdibali@gmail.com</p>
+                <p class="position">Jabatan : Komka Animasi dan DKV</p>
+            </div>
+        </div>
+
+        <div class="teacher-card">
+            <img src="/aset/gambar/8.png" alt="Foto Guru 7">
+            <div class="teacher-details">
+                <p class="nik">NIK/NG : 0021.007</p>
+                <p class="name">Nama Lengkap : A.A Gede Putra Dwi Artajaya,S.Si.,M.Kom</p>
+                <p class="phone">No Tlp : 082247033XXX</p>
+                <p class="email">Email : agoengdwi86@gmail.com</p>
+                <p class="position">Jabatan : Komka RPL</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <button id="nextPageButton">Halaman Berikutnya</button>
+    </div>
+
+    <script>
+        document.getElementById('nextPageButton').addEventListener('click', function() {
+            window.location.href = 'guru2.html';
+        });
+    </script>
+    <!--isi-->
+</body>
+
+ <!-- footer -->
+ <footer>
+    <div class="footerAtas">
+        <div class="kolomKiri">
+            <img src="aset/gambar/icon.png" alt="Logo TI" class="logoTi" />
+            <p>
+                Nikmati Cara Mudah dan Menyenangkan <br /> Ketika Membaca Buku,
+                Update Informasi <br /> Sekolah Hanya Dalam Satu Genggaman
+            </p>
+        </div>
+        <div class="kolomKanan">
+            <h2>Temukan kami</h2>
+            <div class="socialMedia">
+                <a href="#"><i class="ri-telegram-fill"></i></a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#"><i class="ri-twitter-x-fill"></i></a>
+                <a href="#"><i class="ri-youtube-fill"></i></a>
+                <a href="#"><i class="ri-facebook-fill"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footerBawah">
+        <p>&copy;CopyRight <b>SMK TI Bali Global Denpasar</b></p>
+    </div>
+</footer>
+</html>
