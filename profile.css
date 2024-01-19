@@ -1,4 +1,7 @@
 /*Ekstrakurikurer*/
+.extra,.fasilitas{
+  margin-bottom: 50px;
+}
 .section-titleextra {
     text-align: center;
     color: #ffffff;
@@ -289,6 +292,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 th, td {

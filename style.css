@@ -156,7 +156,7 @@ li .login:hover{
 
 /* footer */
 footer {
-    margin-top: 50px;
+    margin-top: auto;
     background-color: #00244a; 
     color: var(--warnaPutih); 
     padding: 20px 0; 
