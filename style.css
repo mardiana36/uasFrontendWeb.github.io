@@ -71,6 +71,9 @@ li{
     padding: 0;
     gap: 20px;
 }
+#contentDropMobile a{
+    color: var(--warnaBiru);
+}
 .container-menu{
     margin: 0;
 }
@@ -113,7 +116,7 @@ li{
     border: none !important;
 }
 .content-drop ol li:hover a{
-    color: var(--warnaKuning);
+    color: var(--warnaKuning) !important;
 }
 
 .content-drop li{
@@ -123,8 +126,12 @@ li{
 .contentDrop-mobile a{
     color: var(--warnaBiru);
 }
+.displayPPDB{
+    display: block;
+}
 .iconDrop-mobile{
    display: none;
+   cursor: pointer;
 }
 .symbol{
     font-size: 10px;
@@ -133,14 +140,14 @@ li .login{
     display: inline-block;
     padding: 5px 20px;
     border: 2px solid var(--warnaKuning);
-    color: var(--warnaKuning);
+    color: var(--warnaKuning) !important;
     border-radius: 5px;
     font-weight: bold;
     transition: 0.5s;
 }
 li .login:hover{
     border: none;
-    color: var(--warnaPutih);
+    color: var(--warnaPutih) !important;
     background-color: var(--warnaKuning);
 }
 @keyframes animasiDrop {

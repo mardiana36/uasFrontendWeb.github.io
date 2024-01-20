@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
     
     function dotActive(index) {
-      for (i = 0; i < dot.length; i++) {
+      for (let i = 0; i < dot.length; i++) {
         dot[i].classList.remove("dotActive");
       }
       dot[index].classList.add("dotActive");
@@ -39,10 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     dotActive(0);
     function gass() {
       goScroll = Math.floor(card.offsetWidth + 20);
-      if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
-        dotActive(0);
-        container.scrollLeft = 0;
-      } else {
         if (index < dot.length - 1) {
           index++;
           console.log(index);
@@ -52,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         dotActive(index);
         container.scrollLeft = index * goScroll;
-      }
     }
 
     setInterval(gass, 2500);
@@ -61,10 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function nexpage() {
     let data = document.getElementsByClassName("card-home2");
-    let halAktif = 1;
+    let halAktif = 0;
     let dataPerHal = 6;
     function tampilDataHal(hal) {
-      let awalIndex = (hal - 1) * dataPerHal;
+      let awalIndex = hal  * dataPerHal;
       let akhirIndex = awalIndex + dataPerHal;
       for (let i = 0; i < data.length; i++) {
         data[i].classList.remove("dispalyBlock");
@@ -78,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
       for (let i = 0; i < semuaTombol.length; i++) {
         semuaTombol[i].classList.remove("activeButton");
       }
-      semuaTombol[index - 1].classList.add("activeButton");
+      semuaTombol[index].classList.add("activeButton");
     }
     function navigasiHal() {
       let jumlahData = data.length;
@@ -88,10 +83,10 @@ document.addEventListener("DOMContentLoaded", function () {
       let pagination = document.getElementById("pagination");
       let containerBerita = document.getElementById("sectionHome2");
       pagination.innerHTML = "";
-      for (let i = 1; i <= jumlahHal; i++) {
+      for (let i = 0; i < jumlahHal; i++) {
         let button = document.createElement("button");
         button.classList.add("button-home2");
-        button.textContent = i;
+        button.textContent = i+1;
         button.addEventListener("click", function () {
           setButtonActive(i);
           containerBerita.scrollIntoView();
@@ -101,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
         pagination.appendChild(button);
       }
       buttonprev.addEventListener("click", function () {
-        if (halAktif > 1) {
+        if (halAktif > 0) {
           halAktif--;
           setButtonActive(halAktif);
           containerBerita.scrollIntoView();
@@ -110,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       buttonnext.addEventListener("click", function () {
-        if (halAktif < jumlahHal) {
+        if (halAktif < jumlahHal-1) {
           halAktif++;
           setButtonActive(halAktif);
           containerBerita.scrollIntoView();
@@ -118,9 +113,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
-    tampilDataHal(1);
+    tampilDataHal(0);
     navigasiHal();
-    setButtonActive(1);
+    setButtonActive(0);
   }
   nexpage();
 });
@@ -202,7 +197,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   pendaftaran();
-
-  
-  
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  function layananPPDB() {
+    let elementclick = document.getElementById('layananPPDB');
+    let content = document.getElementById('contentDropPPDB');
+    let appdb = document.getElementById('aPPDB');
+    let iconDrop = document.getElementById("iconDropMobile");
+    let contentDrop = document.getElementById("contentDropMobile");
+    elementclick.addEventListener('click', function () {
+      if (contentDrop.style.display =='none') {
+        iconDrop.click(); 
+      }
+      content.classList.add('displayPPDB');
+      appdb.addEventListener('mouseenter', function () {
+        content.classList.remove('displayPPDB');
+      })
+    });
+  }
+  layananPPDB();
+})

@@ -31,8 +31,8 @@ document.write(`<nav class=" section section-nav">
                     </div>
                 </li>
                 <li class="container-drop">
-                    <a >PPDB <span class="symbol">&#9660;</span></a>
-                    <div class="content-drop">
+                    <a id="aPPDB">PPDB <span class="symbol">&#9660;</span></a>
+                    <div class="content-drop" id ="contentDropPPDB">
                         <ol>
                             <li><a href="daftarPPDB.html">Daftar PPDB</a></li>
                             <li><a href="hasilPPDB.html">Hasil PPDB</a></li>
@@ -45,4 +45,4 @@ document.write(`<nav class=" section section-nav">
         </div>
     </ul>
 </div>
-</nav>`)
+</nav>`);
